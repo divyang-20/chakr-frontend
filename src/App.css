@@ -1,38 +1,384 @@
-.App {
-  text-align: center;
+html {
+    background-color: #F6F6F3;
+    padding: 5px;
+    margin: 0;
+    scroll-behavior: smooth;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body::-webkit-scrollbar {
+    display: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* /////////////////////////////////                 COMMOM                     ///////////////////////////////// */
+
+.normalText {
+    margin-top: 5px;
+    color: #454545;
+    font-size: 18px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.topText {
+    display: flex;
+    color: #734A00;
+    font-size: 18px;
+    margin-top: 24%;
 }
 
-.App-link {
-  color: #61dafb;
+.middleText {
+    display: flex;
+    color: #454545;
+    font-size: 18px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.middleText2 {
+    display: flex;
+    color: #734A00;
+    font-size: 18px;
+    margin-top: 8%;
+}
+
+.growthNormalText {
+    color: #7D7D7D;
+    font-size: 20px;
+}
+
+.growthBoldText {
+    color: #734A00;
+    font-size: 26px;
+    font-weight: bold;
+    margin-top: 25%;
+}
+
+.growthYearText {
+    color: #FFA500;
+    font-size: 22px;
+}
+
+/* /////////////////////////////////                       LEFT VIEW                      //////////////////////////// */
+
+.leftViewContainer {
+    padding: 25px 20px;
+    width: 20%;
+    background-color: white;
+    border-radius: 14px;
+}
+
+.inputBox {
+    padding: 14px 5px 12px 40px;
+    font-size: 16px;
+    border-radius: 24px;
+    border-color: #F1F1F1;
+    border-width: 1px;
+}
+
+/* ///////////////////////////                          RIGHT VIEW                        //////////////////////////////// */
+
+.rightViewContainer {
+    margin-left: 15px;
+    width: 80%;
+}
+
+/* //////////////////////////                     RIGHT TOP REVENUE VIEW                     ///////////////////////// */
+
+.revenuesContainer {
+    padding: 8px 25px 25px 25px;
+    width: 35%;
+    background-color: white;
+    border-radius: 14px;
+    margin-right: 1.5%;
+}
+
+.revenuesPercent {
+    font-size: 60px;
+    display: flex;
+    align-items: center;
+    font-family: 'Inter', sans-serif;
+}
+
+/* //////////////////////////                     RIGHT TOP LOST DEALS VIEW                     ///////////////////////// */
+
+.lostDealsContainer {
+    padding: 8px 25px 25px 25px;
+    width: 40%;
+    background-color: white;
+    border-radius: 14px;
+    margin-right: 1.5%;
+}
+
+/* //////////////////////////                     RIGHT TOP QUARTER GOAL VIEW                     ///////////////////////// */
+
+.quarterGoalContainer {
+    padding: 8px 25px 25px 25px;
+    width: 22%;
+    background-color: white;
+    border-radius: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* //////////////////////////                     RIGHT MIDDLE CUSTOMERS VIEW                     ///////////////////////// */
+
+.customersContainer {
+    padding: 8px 25px 25px 25px;
+    width: 40%;
+    background-color: white;
+    border-radius: 14px;
+}
+
+/* //////////////////////////                     RIGHT MIDDLE GROWTH VIEW                     ///////////////////////// */
+
+.growthTopContainer {
+    padding: 8px 25px 25px 25px;
+    background-color: white;
+    border-radius: 14px;
+    margin-bottom: 15px;
+}
+
+.monthConatiner {
+    width: 30%;
+    padding: 13px 20px;
+    background-color: white;
+    border-radius: 14px;
+    margin-right: 1.5%;
+}
+
+.buyerConatiner {
+    width: 30%;
+    padding: 13px 20px;
+    background-color: white;
+    border-radius: 14px;
+}
+
+/* //////////////////////////                     RIGHT BOTTOM CHATS VIEW                     ///////////////////////// */
+
+.chatsContainer {
+    padding: 8px 25px 25px 25px;
+    width: 27%;
+    background-color: white;
+    border-radius: 14px;
+    margin-right: 1.5%;
+}
+
+.strip {
+    background: linear-gradient(90deg, #FFCD71 -2.57%, rgba(255, 205, 113, 0) 112.5%);
+    display: flex;
+    justify-content: space-between;
+    padding: 9px 6px;
+    margin-bottom: 9px;
+    border-radius: 9px;
+}
+
+/* //////////////////////////                     RIGHT BOTTOM NEW DEALS VIEW                     ///////////////////////// */
+
+.newDealsContainer {
+    padding: 8px 25px 25px 25px;
+    width: 43%;
+    background-color: white;
+    border-radius: 14px;
+}
+
+.dealsGrid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.dealsCard {
+    background-color: #FFF7E8;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 12px;
+    border-radius: 15px;
+    width: fit-content;
+    margin-bottom: 10px;
+}
+
+/* ///////////////////////////                        RESPONSIVE                      //////////////////////// */
+
+@media (max-width: 1200px) {
+    .leftViewContainer {
+        width: 30%;
+    }
+
+    .rightViewContainer {
+        width: 70%;
+    }
+
+    .normalText {
+        margin-top: 5px;
+        font-size: 16px;
+    }
+
+    .topText {
+        font-size: 16px;
+        margin-top: 20%;
+    }
+
+    .middleText {
+        font-size: 16px;
+    }
+
+    .middleText2 {
+        font-size: 16px;
+        margin-top: 6%;
+    }
+
+    .growthNormalText {
+        font-size: 18px;
+    }
+
+    .growthBoldText {
+        font-size: 24px;
+        margin-top: 20%;
+    }
+
+    .growthYearText {
+        font-size: 20px;
+    }
+
+    .revenuesContainer,
+    .lostDealsContainer,
+    .quarterGoalContainer,
+    .customersContainer,
+    .growthTopContainer,
+    .chatsContainer,
+    .newDealsContainer {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 12px;
+    }
+
+    .monthConatiner,
+    .buyerConatiner {
+        width: 48%;
+        margin-right: 4%;
+    }
+}
+
+@media (max-width: 1000px) {
+    .leftViewContainer {
+        width: 35%;
+    }
+
+    .rightViewContainer {
+        width: 75%;
+    }
+
+    .normalText,
+    .topText,
+    .middleText {
+        font-size: 15px;
+    }
+
+    .middleText2 {
+        font-size: 15px;
+        margin-top: 5%;
+    }
+
+    .growthBoldText {
+        font-size: 20px;
+        margin-top: 15%;
+    }
+
+    .revenuesContainer,
+    .lostDealsContainer,
+    .quarterGoalContainer,
+    .customersContainer,
+    .growthTopContainer,
+    .chatsContainer,
+    .newDealsContainer {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .monthConatiner,
+    .buyerConatiner {
+        width: 48%;
+        margin-right: 4%;
+    }
+}
+
+@media (max-width: 720px) {
+    .leftViewContainer {
+        width: 100%;
+    }
+
+    .rightViewContainer {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .revenuesContainer,
+    .lostDealsContainer,
+    .quarterGoalContainer,
+    .customersContainer,
+    .growthTopContainer,
+    .chatsContainer,
+    .newDealsContainer {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    .monthConatiner,
+    .buyerConatiner {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 540px) {
+
+    .normalText,
+    .topText,
+    .middleText {
+        font-size: 18px;
+    }
+
+    .middleText2 {
+        font-size: 18px;
+        margin-top: 8%;
+    }
+
+    .growthBoldText {
+        font-size: 24px;
+        margin-top: 20%;
+    }
+}
+
+@media (max-width: 320px) {
+    .normalText {
+        margin-top: 5px;
+        font-size: 16px;
+    }
+
+    .topText {
+        font-size: 16px;
+        margin-top: 20%;
+    }
+
+    .middleText {
+        font-size: 16px;
+    }
+
+    .middleText2 {
+        font-size: 16px;
+        margin-top: 6%;
+    }
+
+    .growthNormalText {
+        font-size: 18px;
+    }
+
+    .growthBoldText {
+        font-size: 24px;
+        margin-top: 20%;
+    }
+
+    .growthYearText {
+        font-size: 20px;
+    }
 }
